@@ -11,23 +11,21 @@ body{
 }
 
 .main-content{
+    display: grid;
+    grid-template-columns: 300px 700px;
     min-height: 1000px;
     width: 90%;
-    margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    margin: 20px auto;
 }
 
 .left-section{
-    padding: 1rem;;
-    grid-column: span 2;
-    height: 100%;
+    grid-column: span 1;
     background-color: #00324A;
 }
 .right-section{
-    grid-column: span 5;
+    grid-column: span 1 / span 2;
     background-color: #f7f7f7;
-    height: 100%;
+    width: 90%;
 }
 
 
@@ -44,7 +42,8 @@ body{
 }
 .profile-image{
     display: block;
-    align-items: center;
+    justify-content: center;
+    justify-self:auto ;
     margin: auto;
     border: 5px solid #ffffff;
     border-radius: 30%;
@@ -58,8 +57,8 @@ body{
     color: white;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 1.2rem 0;
+    letter-spacing: 0.02px;
+    padding: 0.8rem;
 }
 
 .designation{
@@ -127,22 +126,26 @@ body{
     font-size: 0.75rem;
     text-transform: uppercase;
     text-align: center;
-    padding: 1rem 0.5em;
+    padding: 1rem 0.5em  1rem 0.5em;
     color: white;
 }
-.skills-title{
-    font-size: 0.75rem;
-    text-align: center;
-    text-transform:uppercase;
-    padding: 1rem 0.5rem;
+
+
+.skill-name{
+    padding-bottom: 0.5rem;
+    padding-top: 5px;
+    text-transform: uppercase;
     color: #f7f7f7;
+    font-size: 0.65rem;
+    font-weight: 0.65rem;
+    text-align: left;
 
 }
 
-.skills-title ul{
+.skills ul{
     padding-top: 2rem;
 }
-.skills-title ul li{
+.skills ul li{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: .4rem 0;
@@ -156,7 +159,7 @@ body{
     border-radius: 12px;
 }
 .progress-bar{
-    height: 100%;
+    height: 4px;
     position: absolute;
     left: 0;
     border: 1px white solid;
@@ -192,35 +195,14 @@ body{
 }
 
 
-
-.skill-name{
-    padding-bottom: 0.5rem;
-    padding-top: 5px;
-    text-transform: uppercase;
-    color: #f7f7f7;
-    font-size: 0.65rem;
-    font-weight: 0.65rem;
-    text-align: left;
-
-}
-
-.sub-title{
-    padding-top: 2rem;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: #f7f7f7;
-}
-
-.sub-para{
-    color: #ccc;
-    padding: .4rem 0;
-}
-
 .right-main-content{
-    padding: 2rem 3rem;
+    padding: 32px 48px 32px 48px;
 }
 
 .right-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #2F80ED;
@@ -288,7 +270,7 @@ body{
 }
 
 /*Media Querries*/
-@media screen and (max-width:823px){
+/*@media screen and (max-width:823px){
     .right-title::after{
         width: 40%;
     }
@@ -303,22 +285,25 @@ body{
         grid-template-columns: repeat(1, 1fr);
     }
 }
-@media screen and (max-width:780px){
+@media screen and (max-width:673px){
     .left-section{
         grid-column: span 3;
     }
     .right-section{
         grid-column: span 4;
     }
-}
+}*/
 @media screen and (max-width:673px){
         .main-content{
             grid-template-columns: repeat(1, 1fr);
+            width: 90%;
+            min-height: 1000px;
         }
     .profile-image img{
         width: 40%;
     }
 }
+/*
 @media screen and (max-width:700px){
     .profile-image img{
         width: 60%;
